@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.env
+
+# Node
+node_modules/
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# Runtime
+*.db
+*.sqlite3
+*.log
+*.mp4
+*.avi
+*.mov
+
+# Model files
+*.pt
+*.onnx
+
+# OS
+.DS_Store
+Thumbs.db

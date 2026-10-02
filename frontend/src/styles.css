@@ -1,0 +1,404 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #e9eef5;
+  background: #0b0f14;
+  font-synthesis: none;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.10), transparent 28%),
+    #0b0f14;
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.topbar {
+  height: 82px;
+  padding: 0 34px;
+  border-bottom: 1px solid #202733;
+  background: rgba(11, 15, 20, 0.9);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.brand-mark {
+  width: 43px;
+  height: 43px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #182338;
+  color: #68a4ff;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 19px;
+  letter-spacing: -0.02em;
+}
+
+.brand-row p {
+  color: #7f8b9c;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.connection {
+  color: #9ca9ba;
+  font-size: 13px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #687386;
+}
+
+.dot.live {
+  background: #4ade80;
+  box-shadow: 0 0 12px rgba(74, 222, 128, .6);
+}
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 28px 34px 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.stat-card, .panel {
+  border: 1px solid #222b38;
+  background: #11161d;
+  border-radius: 16px;
+}
+
+.stat-card {
+  padding: 19px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.stat-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #182131;
+  color: #75aaff;
+  display: grid;
+  place-items: center;
+}
+
+.stat-title {
+  color: #8c98a9;
+  font-size: 12px;
+}
+
+.stat-value {
+  font-size: 25px;
+  font-weight: 750;
+  margin: 2px 0;
+}
+
+.stat-subtitle {
+  color: #626f81;
+  font-size: 11px;
+}
+
+.main-grid, .bottom-grid {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.bottom-grid {
+  grid-template-columns: 1.25fr 1fr;
+}
+
+.panel {
+  overflow: hidden;
+}
+
+.panel-header {
+  min-height: 70px;
+  padding: 16px 19px;
+  border-bottom: 1px solid #202733;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.panel-header span {
+  display: block;
+  margin-top: 4px;
+  color: #697687;
+  font-size: 11px;
+}
+
+.live-pill {
+  color: #65df92;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+}
+
+.camera-frame {
+  min-height: 430px;
+  background: #070a0e;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.camera-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 610px;
+  object-fit: contain;
+}
+
+.camera-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 8px;
+  background: rgba(7, 10, 14, .82);
+  color: #9ba7b7;
+}
+
+.camera-overlay strong {
+  color: #e5eaf0;
+}
+
+.camera-overlay span {
+  font-size: 12px;
+}
+
+.status-list {
+  padding: 6px 19px 13px;
+}
+
+.status-list div {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #1d2530;
+  font-size: 12px;
+}
+
+.status-list span {
+  color: #737f90;
+}
+
+.status-list strong {
+  color: #dce4ee;
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.settings {
+  padding: 8px 19px 20px;
+}
+
+.settings h3 {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.settings label {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  align-items: center;
+  gap: 12px;
+  color: #7e8a9b;
+  font-size: 12px;
+  margin: 9px 0;
+}
+
+.settings input {
+  width: 100%;
+  padding: 8px 9px;
+  color: #e7edf5;
+  background: #0b1017;
+  border: 1px solid #273140;
+  border-radius: 8px;
+  outline: none;
+}
+
+.settings button {
+  margin-top: 8px;
+  width: 100%;
+  border: 0;
+  border-radius: 9px;
+  padding: 10px 12px;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.settings button:disabled {
+  opacity: .6;
+}
+
+.events {
+  padding: 5px 19px 15px;
+}
+
+.event-row {
+  min-height: 62px;
+  border-bottom: 1px solid #1d2530;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.event-icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #2b1e18;
+  color: #f59e0b;
+}
+
+.event-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.event-info strong {
+  display: block;
+  font-size: 11px;
+}
+
+.event-info span {
+  display: block;
+  margin-top: 3px;
+  color: #707d8e;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-row time {
+  color: #596576;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.empty {
+  padding: 45px 0;
+  text-align: center;
+  color: #606c7c;
+  font-size: 12px;
+}
+
+.chart {
+  padding: 18px;
+}
+
+.icon-btn {
+  border: 1px solid #273140;
+  color: #8793a4;
+  background: #101720;
+  border-radius: 8px;
+  padding: 7px;
+}
+
+.ok-icon {
+  color: #4ade80;
+}
+
+footer {
+  padding: 7px 2px 25px;
+  display: flex;
+  justify-content: space-between;
+  color: #4f5c6d;
+  font-size: 11px;
+}
+
+@media (max-width: 1050px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-grid, .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .topbar {
+    padding: 0 17px;
+  }
+  .content {
+    padding: 18px 17px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .camera-frame {
+    min-height: 300px;
+  }
+  footer {
+    flex-direction: column;
+    gap: 7px;
+  }
+}
